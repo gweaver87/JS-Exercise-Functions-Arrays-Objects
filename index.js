@@ -23,6 +23,9 @@ function addNumbers(num1, num2) {
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 
+
+
+
 /**
  * ### Challenge `makePersonObject`
  *
@@ -47,6 +50,7 @@ function makePersonObject(id, name, email) {
   }
   return person;
 }
+console.log(makePersonObject());
 
 /**
  * ### Challenge `getName`
@@ -61,9 +65,13 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(person) {
-  return `Hello, my name is ${person.name}.`;
+function getName() {
+  const person = {
+    name: 'Greg',
+  }
+  return 'Hello, my name is ' + person.name;
 }
+console.log(getName());
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -78,25 +86,22 @@ function getName(person) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
+
 function makeSmartPerson(name) {
-  const smartPerson = {
+  const person = {
     name: name,
     sum: function(num1, num2) {
       return num1 + num2;
     },
     speak: function() {
-      return `Hello, my name is ${name}.`;
-    }
-  };
-
-  return smartPerson;
+      return ('Hello, my name is ' + person.name);
+    },
+  }
+  return person;
 }
+console.log(makeSmartPerson().sum(1,2));
+console.log(makeSmartPerson('Greg').speak());
 
-
-
-
-
-/*
 // ⭐️ Example Test Data ⭐️
 
 var inventory = [
@@ -116,7 +121,7 @@ var inventory = [
   { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
   /// ... Truncated
 ]
-*/
+
 /**
   * ### Example Array Challenge:
   *
